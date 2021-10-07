@@ -90,6 +90,7 @@ li {
   font-weight: bold;
 }
 .timestamp {
+  color: #666666;
   font-size: small;
   padding-left: 0;
   padding-top: 10px;
