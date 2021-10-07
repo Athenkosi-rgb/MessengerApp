@@ -1,0 +1,94 @@
+/* Global*/
+* {
+  font-family: Roboto, Arial, "sans-serif";
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vh;
+}
+
+img {
+  background-color: #00838f;
+  margin-top: 0;
+}
+
+button {
+  background-color: #00838f;
+  text-transform: uppercase;
+  color: white;
+  font-size: larger;
+}
+
+/*====================================================================================*/
+
+/* App Bar*/
+
+.headbar-channel {
+  background-color: #eeeeee;
+  color: #00838f;
+  height: 5vh;
+  font-size: large;
+  padding: 4%;
+  line-height: 0;
+  font-weight: bold;
+}
+
+.headbar-chat {
+  background-color: #eeeeee;
+  color: #00838f;
+  height: 5vh;
+  font-size: large;
+  padding: 4%;
+  line-height: 3;
+  font-weight: bold;
+}
+
+/*====================================================================================*/
+
+/* Channel Lists*/
+
+#channels-view {
+  vertical-align: top;
+  height: 100vh;
+  width: 399px;
+  position: fixed;
+  border-right: 1px solid grey;
+}
+
+.channel-list {
+  background-color: white;
+  list-style-type: none;
+}
+.channel-name {
+  font-weight: bold;
+}
+.timestamp {
+  font-size: small;
+}
+
+/*====================================================================================*/
+
+/* Messages*/
+
+#chat-view {
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  left: 400px;
+  width: calc(100% - 400px);
+}
+
+.text {
+  background-color: #eeeeee;
+}
+
+.username {
+  color: #00838f;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+/*====================================================================================*/

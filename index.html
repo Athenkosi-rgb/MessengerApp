@@ -1,70 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Chatter|App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        font-family: Roboto, Arial, "sans-serif";
-      }
-
-      h1 {
-        color: #00838f;
-      }
-
-      h2 {
-        color: #00838f;
-        font-size: smaller;
-      }
-
-      p {
-        background-color: #eeeeee;
-      }
-
-      button {
-        background-color: #00838f;
-        text-transform: uppercase;
-        color: white;
-        font-size: larger;
-      }
-    </style>
   </head>
 
-  <!--Channel 1, Shows recents, and summary of chat-->
   <body>
-    <h1>chatter|app</h1>
+    <!--Channel 1, Shows recents, and summary of chat-->
+    <section id="channels-view">
+      <div class="headbar-channel">
+        <img src="https://ip.lfe.mw.tum.de/sections/moocus.png" height="56px" />
+        <span>chatter | app</span>
+      </div>
 
-    <h2>Favorites</h2>
-    <strong>MeetUp</strong> <small>11:51</small> <br />
-    <strong>OktoberFest</strong> <small>10:51</small>
+      <ul class="channel-list">
+        <li
+          style="
+            color: #00838f;
+            font-size: smaller;
+            font-weight: bold;
+            text-transform: uppercase;
+          "
+        >
+          Favorites
+        </li>
+        <li>
+          <span class="channel-name">MeetUp</span>
+          <span class="timestamp">11:51</span>
+        </li>
+        <li>
+          <span class="channel-name">OktoberFest</span>
+          <span class="timestamp">10:51</span>
+        </li>
 
-    <h2>Regular</h2>
-    <strong>WeatherChannel</strong> <small>Yesterday</small> <br />
-    <strong>SevenContinents</strong> <small>23 May 2019</small>
-  </body>
+        <li
+          style="
+            color: #00838f;
+            font-size: smaller;
+            font-weight: bold;
+            text-transform: uppercase;
+          "
+        >
+          Regular
+        </li>
+        <li>
+          <span class="channel-name">WeatherChannel</span>
+          <span class="timestamp">Yesterday</span>
+        </li>
+        <li>
+          <span class="channel-name">SevenContinents</span>
+          <span class="timestamp">23 May 2019</span>
+        </li>
+      </ul>
+    </section>
 
-  <!--Channel 2, Shows actual chat of particular group-->
-  <body>
-    <h1>MeetUp</h1>
+    <!--Channel 2, Shows actual chat of particular group-->
+    <section id="chat-view">
+      <div class="headbar-chat">
+        <span>MeetUp</span>
+        <span><button>Favourite</button></span>
+      </div>
 
-    <button>Favourite</button>
+      <div id="chat-area">
+        <div class="message incoming">
+          <div class="username">Jessie Koch</div>
+          <div class="text">
+            Hey bro did you hear about Facebook, Twitter and WhatsApp?
+          </div>
+          <div class="timestamp">11:45</div>
 
-    <h2>Jessie Koch</h2>
-    <p>Hey bro do you know if there's any event happening tonight?<br /></p>
-    <small>11:45</small>
+          <div class="username">Steve Nash</div>
+          <div class="text">Yeah, they died on the entire world right?</div>
+          <div class="timestamp">11:47</div>
 
-    <h2>Steve Nash</h2>
-    <p>Yeah, it's a party at Englisher Garten<br /></p>
-    <small>11:49</small>
+          <div class="username">Jessie Koch</div>
+          <div class="text">
+            Surely, but I heard there's a new and better app. ChatterApp -
+            created by Athenkosi Hlonyane
+          </div>
+          <div class="timestamp">11:49</div>
+        </div>
+        <br />
 
-    <h2>Jessie Koch</h2>
-    <p>Alright i'm on my way <br /></p>
-    <small>11:49</small>
-    <br />
-
-    <input type="text" />
-    <button>Send</button>
+        <div id="type-bar">
+          <input type="text" />
+          <button>Send</button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
