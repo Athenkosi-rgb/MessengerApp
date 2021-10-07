@@ -22,6 +22,16 @@ button {
   font-size: larger;
 }
 
+li {
+  box-sizing: border-box;
+  padding: 22px;
+  height: 66px;
+}
+
+.divider {
+  height: 15px;
+}
+
 /*====================================================================================*/
 
 /* App Bar*/
@@ -29,9 +39,12 @@ button {
 .headbar-channel {
   background-color: #eeeeee;
   color: #00838f;
-  height: 5vh;
   font-size: large;
-  padding: 4%;
+  height: 55px;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
   line-height: 0;
   font-weight: bold;
 }
@@ -39,10 +52,11 @@ button {
 .headbar-chat {
   background-color: #eeeeee;
   color: #00838f;
-  height: 5vh;
   font-size: large;
-  padding: 4%;
+  height: 35px;
+  padding: 15px;
   line-height: 3;
+  line-height: 0;
   font-weight: bold;
 }
 
@@ -58,6 +72,13 @@ button {
   border-right: 1px solid grey;
 }
 
+.headings {
+  color: #00838f;
+  font-size: smaller;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .channel-list {
   background-color: white;
   list-style-type: none;
@@ -67,6 +88,9 @@ button {
 }
 .timestamp {
   font-size: small;
+  padding-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /*====================================================================================*/
@@ -74,6 +98,7 @@ button {
 /* Messages*/
 
 #chat-view {
+  vertical-align: top;
   background-color: white;
   height: 100vh;
   position: fixed;
@@ -81,14 +106,38 @@ button {
   width: calc(100% - 400px);
 }
 
-.text {
-  background-color: #eeeeee;
-}
-
 .username {
   color: #00838f;
   font-size: smaller;
   font-weight: bold;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+/*incoming*/
+
+#chat-area .incoming .messages {
+  background-color: #eeeeee;
+  width: 75%;
+  padding: 16px;
+  margin-left: 15px;
+}
+
+/*outgoing*/
+
+#chat-area .outgoing .messages {
+  background-color: #00838f;
+  color: white;
+  width: 75%;
+  padding: 16px;
+  margin-left: 15px;
+}
+
+#selected {
+  background-color: #eeeeee;
+  height: 100px;
+  width: 399px;
+  border-right: 3px solid #00838f;
 }
 
 /*====================================================================================*/

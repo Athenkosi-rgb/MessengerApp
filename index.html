@@ -13,25 +13,22 @@
   </head>
 
   <body>
-    <!--Channel 1, Shows recents, and summary of chat-->
+    <!--Left Chat, Shows recents, and summary of chat-->
     <section id="channels-view">
       <div class="headbar-channel">
-        <img src="https://ip.lfe.mw.tum.de/sections/moocus.png" height="56px" />
+        <img
+          src="https://ip.lfe.mw.tum.de/sections/moocus.png"
+          alt="chatter|app logo"
+          height="56px"
+        />
         <span>chatter | app</span>
       </div>
 
+      <div class="divider"></div>
+
       <ul class="channel-list">
-        <li
-          style="
-            color: #00838f;
-            font-size: smaller;
-            font-weight: bold;
-            text-transform: uppercase;
-          "
-        >
-          Favorites
-        </li>
-        <li>
+        <li class="headings">Favorites</li>
+        <li id="selected">
           <span class="channel-name">MeetUp</span>
           <span class="timestamp">11:51</span>
         </li>
@@ -40,16 +37,7 @@
           <span class="timestamp">10:51</span>
         </li>
 
-        <li
-          style="
-            color: #00838f;
-            font-size: smaller;
-            font-weight: bold;
-            text-transform: uppercase;
-          "
-        >
-          Regular
-        </li>
+        <li class="headings">Regular</li>
         <li>
           <span class="channel-name">WeatherChannel</span>
           <span class="timestamp">Yesterday</span>
@@ -61,38 +49,56 @@
       </ul>
     </section>
 
-    <!--Channel 2, Shows actual chat of particular group-->
+    <!--Right Channel, Shows actual chat of particular group-->
     <section id="chat-view">
       <div class="headbar-chat">
         <span>MeetUp</span>
         <span><button>Favourite</button></span>
       </div>
 
+      <div class="divider"></div>
+
       <div id="chat-area">
-        <div class="message incoming">
-          <div class="username">Jessie Koch</div>
-          <div class="text">
-            Hey bro did you hear about Facebook, Twitter and WhatsApp?
+        <div class="incoming">
+          <div class="messages">
+            <div class="username">Jessie Koch</div>
+            <div class="text">
+              Hey bro did you hear about Facebook, Twitter and WhatsApp?
+            </div>
           </div>
           <div class="timestamp">11:45</div>
 
-          <div class="username">Steve Nash</div>
-          <div class="text">Yeah, they died on the entire world right?</div>
-          <div class="timestamp">11:47</div>
-
-          <div class="username">Jessie Koch</div>
-          <div class="text">
-            Surely, but I heard there's a new and better app. ChatterApp -
-            created by Athenkosi Hlonyane
+          <div class="messages">
+            <div class="username">Steve Nash</div>
+            <div class="text">Yeah, they died on the entire world right?</div>
           </div>
-          <div class="timestamp">11:49</div>
+          <div class="timestamp">11:47</div>
         </div>
-        <br />
 
-        <div id="type-bar">
-          <input type="text" />
-          <button>Send</button>
+        <div class="outgoing">
+          <div class="messages">
+            <div class="text">
+              Damn, B they tripping! How long this goin' last bro?
+            </div>
+          </div>
+          <div class="timestamp">11:52</div>
         </div>
+
+        <div class="incoming">
+          <div class="messages">
+            <div class="username">Jessie Koch</div>
+            <div class="text">
+              Surely, but I heard there's a new and better app. ChatterApp -
+              created by Athenkosi Hlonyane
+            </div>
+          </div>
+          <div class="timestamp">12:00</div>
+        </div>
+      </div>
+
+      <div id="type-bar">
+        <input type="text" />
+        <button>Send</button>
       </div>
     </section>
   </body>
