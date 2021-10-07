@@ -55,7 +55,6 @@ li {
   font-size: large;
   height: 35px;
   padding: 15px;
-  line-height: 3;
   line-height: 0;
   font-weight: bold;
 }
@@ -72,11 +71,13 @@ li {
   border-right: 1px solid grey;
 }
 
-.headings {
+h2 {
   color: #00838f;
   font-size: smaller;
   font-weight: bold;
   text-transform: uppercase;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .channel-list {
@@ -135,7 +136,7 @@ li {
 
 #selected {
   background-color: #eeeeee;
-  height: 100px;
+  height: 66px;
   width: 399px;
   border-right: 3px solid #00838f;
 }
