@@ -10,11 +10,6 @@ body {
   width: 100vh;
 }
 
-img {
-  background-color: #00838f;
-  margin-top: 0;
-}
-
 button {
   background-color: #00838f;
   text-transform: uppercase;
@@ -38,25 +33,79 @@ li {
 
 .headbar-channel {
   background-color: #eeeeee;
-  color: #00838f;
-  font-size: large;
-  height: 55px;
+  height: 60px;
   padding-top: 0px;
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
   line-height: 0;
+}
+
+#logo {
+  background-color: #00838f;
+  position: absolute;
+  border-radius: 0.45vh;
+  left: 12px;
+  top: 12px;
+  bottom: 12px;
+  width: 46px;
+  padding: 0.1px;
+}
+
+#channel-title {
+  position: absolute;
+  left: 58px;
+  margin-left: 10px;
+  padding: 35px 0;
+}
+
+h1 {
+  color: #00838f;
+  font-size: large;
   font-weight: bold;
 }
 
 .headbar-chat {
   background-color: #eeeeee;
-  color: #00838f;
-  font-size: large;
-  height: 35px;
+  height: 40px;
   padding: 15px;
   line-height: 0;
-  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chat-title {
+  margin-left: 10px;
+}
+
+/* Rules for using icons as white on a dark background. */
+#favorite-button {
+  margin-right: 5px;
+  color: #00838f;
+  cursor: pointer;
+}
+#add-button {
+  width: 44px;
+  height: 44px;
+  background-color: #00838f;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 #aaaaaa;
+
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  line-height: 44px;
+
+  position: absolute;
+  top: 47px;
+  right: 22px;
+
+  cursor: pointer;
+}
+.material-icons.md-inactive {
+  margin-right: 5px;
+  color: #00838f;
 }
 
 /*====================================================================================*/
@@ -71,6 +120,11 @@ li {
   border-right: 1px solid grey;
 }
 
+#channel-area {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
 .heading {
   color: #00838f;
   font-size: smaller;
@@ -78,16 +132,39 @@ li {
   text-transform: uppercase;
   padding-left: 10px;
   padding-top: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
   height: 25px;
+}
+
+#selected {
+  background-color: #eeeeee;
+  height: 66px;
+  width: 399px;
+  border-right: 3px solid #00838f;
 }
 
 .channel-list {
   background-color: white;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.channel-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
 .channel-name {
   font-weight: bold;
+  font-size: 16px;
+  margin: 0px 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1 1 auto;
 }
 .timestamp {
   color: #666666;
@@ -96,7 +173,12 @@ li {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
+.group-icon {
+  color: #666666;
+}
+.chat-icon {
+  color: #666666;
+}
 /*====================================================================================*/
 
 /* Messages*/
@@ -118,11 +200,34 @@ li {
   padding-bottom: 10px;
 }
 
+.message-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
 /*incoming*/
 
+#chat-area {
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 26px;
+  padding-right: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-area .incoming {
+  align-self: flex-start;
+}
+
 #chat-area .incoming .messages {
+  border-top-left-radius: 2vh;
+  border-top-right-radius: 2vh;
+  border-bottom-right-radius: 2vh;
+  border-bottom-left-radius: 0.5vh;
   background-color: #eeeeee;
-  width: 75%;
+  width: 75vh;
   padding: 16px;
   margin-left: 15px;
 }
@@ -130,18 +235,65 @@ li {
 /*outgoing*/
 
 #chat-area .outgoing .messages {
+  border-top-left-radius: 2vh;
+  border-top-right-radius: 2vh;
+  border-bottom-right-radius: 0.5vh;
+  border-bottom-left-radius: 2vh;
   background-color: #00838f;
   color: white;
-  width: 75%;
+  width: 75vh;
   padding: 16px;
   margin-left: 15px;
 }
 
-#selected {
+#chat-area .outgoing {
+  align-self: flex-end;
+}
+
+/*input area*/
+
+#input-area {
+  position: relative;
   background-color: #eeeeee;
-  height: 66px;
-  width: 399px;
-  border-right: 3px solid #00838f;
+  height: 45px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  height: 44px;
+  width: 83.5%;
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+  border-bottom-right-radius: 1vh;
+  border-bottom-left-radius: 1vh;
+  border: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: start;
+}
+#emoticon-button {
+  width: 44px;
+  height: 44px;
+  background-color: #00838f;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 #aaaaaa;
+
+  color: white;
+  text-align: center;
+  line-height: 44px;
+
+  position: relative;
+  left: 8px;
+  cursor: pointer;
+}
+#send-button {
+  color: #00838f;
+  position: relative;
+  right: 8px;
+  cursor: pointer;
 }
 
 /*====================================================================================*/

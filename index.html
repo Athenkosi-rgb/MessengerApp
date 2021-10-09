@@ -6,6 +6,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Chatter|App</title>
@@ -13,93 +17,168 @@
   </head>
 
   <body>
+    <!-- =================================|CHANNEL SECTION|=================================================-->
     <!--Left Chat, Shows recents, and summary of chat-->
     <section id="channels-view">
       <div class="headbar-channel">
         <img
+          id="logo"
           src="https://ip.lfe.mw.tum.de/sections/moocus.png"
           alt="chatter|app logo"
-          style="height: 56px"
+          style="height: 46px"
         />
-        <span>chatter | app</span>
+        <h1 id="channel-title">chatter | app</h1>
+        <a class="material-icons" id="add-button">add</a>
       </div>
 
-      <div class="divider"></div>
+      <div id="channel-area">
+        <ul class="channel-list">
+          <li class="heading">Favorites</li>
+          <li id="selected">
+            <i class="material-icons group-icon">group</i>
+            <span class="channel-name">MeetUp</span>
+            <span class="timestamp">11:51</span>
+          </li>
+          <li>
+            <i class="material-icons group-icon">group</i>
+            <span class="channel-name">OktoberFest</span>
+            <span class="timestamp">10:51</span>
+          </li>
 
-      <ul class="channel-list">
-        <li class="heading">Favorites</li>
-        <li id="selected">
-          <span class="channel-name">MeetUp</span>
-          <span class="timestamp">11:51</span>
-        </li>
-        <li>
-          <span class="channel-name">OktoberFest</span>
-          <span class="timestamp">10:51</span>
-        </li>
-
-        <li class="heading">Regular</li>
-        <li>
-          <span class="channel-name">WeatherChannel</span>
-          <span class="timestamp">Yesterday</span>
-        </li>
-        <li>
-          <span class="channel-name">SevenContinents</span>
-          <span class="timestamp">23 May 2019</span>
-        </li>
-      </ul>
+          <li class="heading">Regular</li>
+          <li>
+            <i class="material-icons group-icon">group</i>
+            <span class="channel-name">WeatherChannel</span>
+            <span class="timestamp">Yesterday</span>
+          </li>
+          <li>
+            <i class="material-icons group-icon">group</i>
+            <span class="channel-name">SevenContinents</span>
+            <span class="timestamp">23 May 2019</span>
+          </li>
+        </ul>
+      </div>
     </section>
+
+    <!-- ==================================|CHAT SECTION|=================================================-->
 
     <!--Right Channel, Shows actual chat of particular group-->
     <section id="chat-view">
       <div class="headbar-chat">
-        <span>MeetUp</span>
-        <span><button>Favourite</button></span>
+        <h1 id="chat-title">MeetUp</h1>
+        <a class="material-icons" id="favorite-button">favorite</a>
       </div>
 
       <div class="divider"></div>
 
       <div id="chat-area">
         <div class="incoming">
-          <div class="messages">
-            <div class="username">Jessie Koch</div>
-            <div class="text">
-              Hey bro did you hear about Facebook, Twitter and WhatsApp?
+          <div class="message-wrapper">
+            <i class="material-icons chat-icon">account_circle</i>
+            <div class="messages">
+              <div class="username">Jessie Koch</div>
+              <div class="text">
+                Hey bro did you hear about Facebook, Twitter and WhatsApp?
+              </div>
             </div>
           </div>
           <div class="timestamp">11:45</div>
-
-          <div class="messages">
-            <div class="username">Steve Nash</div>
-            <div class="text">Yeah, they died on the entire world right?</div>
-          </div>
-          <div class="timestamp">11:47</div>
         </div>
 
         <div class="outgoing">
-          <div class="messages">
-            <div class="text">
-              Damn, B they tripping! How long this goin' last bro?
+          <div class="message-wrapper">
+            <div class="messages">
+              <div class="text">
+                Damn, B they tripping! How long this goin' last bro?
+              </div>
             </div>
+            <i class="material-icons chat-icon">account_circle</i>
+          </div>
+          <div class="timestamp">11:52</div>
+
+          <div class="message-wrapper">
+            <div class="messages">
+              <div class="text">
+                Damn, B they tripping! How long this goin' last bro?
+              </div>
+            </div>
+            <i class="material-icons chat-icon">account_circle</i>
+          </div>
+          <div class="timestamp">11:52</div>
+
+          <div class="message-wrapper">
+            <div class="messages">
+              <div class="text">
+                Damn, B they tripping! How long this goin' last bro?
+              </div>
+            </div>
+            <i class="material-icons chat-icon">account_circle</i>
           </div>
           <div class="timestamp">11:52</div>
         </div>
 
         <div class="incoming">
-          <div class="messages">
-            <div class="username">Jessie Koch</div>
-            <div class="text">
-              Surely, but I heard there's a new and better app. ChatterApp -
-              created by Athenkosi Hlonyane
+          <div class="message-wrapper">
+            <i class="material-icons chat-icon">account_circle</i>
+            <div class="messages">
+              <div class="username">Jessie Koch</div>
+              <div class="text">
+                Hey bro did you hear about Facebook, Twitter and WhatsApp?
+              </div>
             </div>
           </div>
-          <div class="timestamp">12:00</div>
+          <div class="timestamp">11:45</div>
+
+          <div class="message-wrapper">
+            <i class="material-icons chat-icon">account_circle</i>
+            <div class="messages">
+              <div class="username">Jessie Koch</div>
+              <div class="text">
+                Hey bro did you hear about Facebook, Twitter and WhatsApp?
+              </div>
+            </div>
+          </div>
+          <div class="timestamp">11:45</div>
+
+          <div class="message-wrapper">
+            <i class="material-icons chat-icon">account_circle</i>
+            <div class="messages">
+              <div class="username">Jessie Koch</div>
+              <div class="text">
+                Hey bro did you hear about Facebook, Twitter and WhatsApp?
+              </div>
+            </div>
+          </div>
+          <div class="timestamp">11:45</div>
+        </div>
+
+        <div class="outgoing">
+          <div class="message-wrapper">
+            <div class="messages">
+              <div class="text">
+                Damn, B they tripping! How long this goin' last bro?
+              </div>
+            </div>
+            <i class="material-icons chat-icon">account_circle</i>
+          </div>
+          <div class="timestamp">11:52</div>
         </div>
       </div>
 
-      <div id="type-bar">
-        <input type="text" placeholder="... write your message" />
-        <button>Send</button>
+      <div id="input-area">
+        <i class="material-icons" id="emoticon-button">insert_emoticon</i>
+        <input
+          type="text"
+          id="message-input"
+          name="message-input"
+          minlength="1"
+          maxlength="500"
+          placeholder="... write your message"
+        />
+        <a class="material-icons button" id="send-button">send</a>
       </div>
     </section>
   </body>
 </html>
+
+<!-- ========================|CHAT SECTION|=================================================-->
