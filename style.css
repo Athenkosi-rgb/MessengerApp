@@ -170,8 +170,8 @@ h1 {
   color: #666666;
   font-size: small;
   padding-left: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 .group-icon {
   color: #666666;
@@ -221,14 +221,20 @@ h1 {
   align-self: flex-start;
 }
 
+#chat-area .incoming .timestamp {
+  text-align: left;
+  margin-left: 38px;
+}
+
 #chat-area .incoming .messages {
   border-top-left-radius: 2vh;
   border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
   border-bottom-left-radius: 0.5vh;
   background-color: #eeeeee;
-  width: 75vh;
-  padding: 16px;
+  width: auto;
+  max-width: 75vh;
+  padding: 12px;
   margin-left: 15px;
 }
 
@@ -241,42 +247,53 @@ h1 {
   border-bottom-left-radius: 2vh;
   background-color: #00838f;
   color: white;
-  width: 75vh;
-  padding: 16px;
-  margin-left: 15px;
+  width: auto;
+  max-width: 75vh;
+  padding: 12px;
+  margin-right: 15px;
 }
 
 #chat-area .outgoing {
   align-self: flex-end;
 }
 
+#chat-area .outgoing .timestamp {
+  text-align: right;
+  margin-right: 38px;
+}
+
 /*input area*/
 
 #input-area {
-  position: relative;
+  position: fixed;
   background-color: #eeeeee;
-  height: 45px;
-  padding: 10px;
+  height: 35px;
+  left: 400px;
+  bottom: 0px;
+  width: calc(100% - 400px);
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-bottom: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 input {
   height: 44px;
-  width: 83.5%;
+  width: 86%;
   border-top-left-radius: 1vh;
   border-top-right-radius: 1vh;
   border-bottom-right-radius: 1vh;
   border-bottom-left-radius: 1vh;
   border: 0;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 15px;
   text-align: start;
 }
 #emoticon-button {
-  width: 44px;
-  height: 44px;
+  width: 45px;
+  height: 45px;
   background-color: #00838f;
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 #aaaaaa;
@@ -286,13 +303,13 @@ input {
   line-height: 44px;
 
   position: relative;
-  left: 8px;
+  left: 5px;
   cursor: pointer;
 }
 #send-button {
   color: #00838f;
   position: relative;
-  right: 8px;
+  right: 0px;
   cursor: pointer;
 }
 
