@@ -24,7 +24,7 @@ li {
 }
 
 .divider {
-  height: 15px;
+  height: 120px;
 }
 
 /*====================================================================================*/
@@ -66,22 +66,28 @@ h1 {
 }
 
 .headbar-chat {
+  position: fixed;
   background-color: #eeeeee;
   height: 40px;
-  padding: 15px;
-  line-height: 0;
+  left: 400px;
+  top: 0px;
+  width: calc(100% - 400px);
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 #chat-title {
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 /* Rules for using icons as white on a dark background. */
 #favorite-button {
-  margin-right: 5px;
+  margin-right: 20px;
   color: #00838f;
   cursor: pointer;
 }
@@ -184,12 +190,13 @@ h1 {
 /* Messages*/
 
 #chat-view {
-  vertical-align: top;
+  position: fixed;
+  top: 70px;
   background-color: white;
   height: 100vh;
-  position: fixed;
   left: 400px;
   width: calc(100% - 400px);
+  overflow: auto;
 }
 
 .username {
@@ -215,6 +222,7 @@ h1 {
   padding-right: 26px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 #chat-area .incoming {
