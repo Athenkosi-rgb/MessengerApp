@@ -142,7 +142,7 @@ h1 {
   height: 25px;
 }
 
-#selected {
+.selected {
   background-color: #eeeeee;
   height: 66px;
   width: 399px;
@@ -289,7 +289,7 @@ h1 {
 
 input {
   height: 44px;
-  width: 86%;
+  width: 88%;
   border-top-left-radius: 1vh;
   border-top-right-radius: 1vh;
   border-bottom-right-radius: 1vh;
@@ -310,13 +310,13 @@ input {
   line-height: 44px;
 
   position: relative;
-  left: 5px;
+  left: 7px;
   cursor: pointer;
 }
 #send-button {
   color: #00838f;
   position: relative;
-  right: 0px;
+  right: 4px;
   cursor: pointer;
 }
 

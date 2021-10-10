@@ -40,26 +40,46 @@
       <div id="channel-area">
         <ul class="channel-list">
           <li class="heading">Favorites</li>
-          <li id="selected">
+          <li class="selected">
             <i class="material-icons group-icon">group</i>
-            <span class="channel-name">MeetUp</span>
+            <span
+              class="channel-name"
+              id="channel1"
+              onclick="switchChannel(channel1);"
+              >MeetUp</span
+            >
             <span class="timestamp">11:51</span>
           </li>
           <li>
             <i class="material-icons group-icon">group</i>
-            <span class="channel-name">OktoberFest</span>
+            <span
+              class="channel-name"
+              id="channel2"
+              onclick="switchChannel(channel2);"
+              >OktoberFest</span
+            >
             <span class="timestamp">10:51</span>
           </li>
 
           <li class="heading">Regular</li>
           <li>
             <i class="material-icons group-icon">group</i>
-            <span class="channel-name">WeatherChannel</span>
+            <span
+              class="channel-name"
+              id="channel3"
+              onclick="switchChannel(channel3);"
+              >WeatherChannel</span
+            >
             <span class="timestamp">Yesterday</span>
           </li>
           <li>
             <i class="material-icons group-icon">group</i>
-            <span class="channel-name">SevenContinents</span>
+            <span
+              class="channel-name"
+              id="channel4"
+              onclick="switchChannel(channel4);"
+              >SevenContinents</span
+            >
             <span class="timestamp">23 May 2019</span>
           </li>
         </ul>
@@ -193,10 +213,10 @@
     </section>
     <!-- ========================|CHAT SECTION|=================================================-->
 
-    <script type="text/javascript" src="../MessengerApp/js/main.js"></script>
     <script
       type="text/javascript"
       src="../MessengerApp/js/channels.js"
     ></script>
+    <script type="text/javascript" src="../MessengerApp/js/main.js"></script>
   </body>
 </html>
