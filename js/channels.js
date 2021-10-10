@@ -6,7 +6,7 @@ const channel1 = {
 const channel2 = {
   name: "OktoberFest",
   id: "channel2",
-  favorite: false,
+  favorite: true,
 };
 const channel3 = {
   name: "WeatherChannel",

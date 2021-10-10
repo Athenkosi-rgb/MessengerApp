@@ -16,17 +16,14 @@ function switchChannel(channel) /*channel we want to highlight.*/ {
   selectedChannel = channel;
   console.log(`"selected" class added to "${channel.name}"`);
   console.log(`"selectedChannel" now equals to "${selectedChannel.name}"`);
+
+  showHeader();
 }
 
 function showHeader() {
+  console.log("showHeader Function called");
   document.getElementById("channelName").innerHTML = selectedChannel.name;
+
+  document.getElementById("favorite-button").innerHTML =
+    selectedChannel.favorite ? "favorite" : "favorite_border";
 }
-
-// We need to do the same thing but with the favorite button.
-// Here it gets tricky because we need to use our ternary operator ?
-// to distinguish if the favorite attribute of the object is “true” or “false”.
-// If it is true we want to use the “favorite” icon. If it is false we want to use the “favorite_border” icon.
-// Tip: If you are struggeling try to google for examples of how to use the ternary operator.
-
-// The last thing we need to do is to call the “showHeader()” function within our “switchChannel(channel)” function.
-// Now your app should show the currently highlighted channel’s name and favorite icon in the headbar. That’s already pretty impressive, right?
