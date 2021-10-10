@@ -40,46 +40,26 @@
       <div id="channel-area">
         <ul class="channel-list">
           <li class="heading">Favorites</li>
-          <li class="selected">
+          <li id="channel1" onclick="switchChannel(channel1);">
             <i class="material-icons group-icon">group</i>
-            <span
-              class="channel-name"
-              id="channel1"
-              onclick="switchChannel(channel1);"
-              >MeetUp</span
-            >
+            <span class="channel-name">MeetUp</span>
             <span class="timestamp">11:51</span>
           </li>
-          <li>
+          <li id="channel2" onclick="switchChannel(channel2);">
             <i class="material-icons group-icon">group</i>
-            <span
-              class="channel-name"
-              id="channel2"
-              onclick="switchChannel(channel2);"
-              >OktoberFest</span
-            >
+            <span class="channel-name">OktoberFest</span>
             <span class="timestamp">10:51</span>
           </li>
 
           <li class="heading">Regular</li>
-          <li>
+          <li id="channel3" onclick="switchChannel(channel3);">
             <i class="material-icons group-icon">group</i>
-            <span
-              class="channel-name"
-              id="channel3"
-              onclick="switchChannel(channel3);"
-              >WeatherChannel</span
-            >
+            <span class="channel-name">WeatherChannel</span>
             <span class="timestamp">Yesterday</span>
           </li>
-          <li>
+          <li id="channel4" onclick="switchChannel(channel4);">
             <i class="material-icons group-icon">group</i>
-            <span
-              class="channel-name"
-              id="channel4"
-              onclick="switchChannel(channel4);"
-              >SevenContinents</span
-            >
+            <span class="channel-name">SevenContinents</span>
             <span class="timestamp">23 May 2019</span>
           </li>
         </ul>
@@ -92,7 +72,7 @@
     <!--Right Channel, Shows actual chat of particular group-->
     <section id="chat-view">
       <div class="headbar-chat">
-        <h1 id="chat-title">MeetUp</h1>
+        <h1 id="channelName">MeetUp</h1>
         <a class="material-icons" id="favorite-button">favorite</a>
       </div>
 

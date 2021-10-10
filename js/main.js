@@ -18,18 +18,6 @@ function switchChannel(channel) /*channel we want to highlight.*/ {
   console.log(`"selectedChannel" now equals to "${selectedChannel.name}"`);
 }
 
-// Let’s focus on the actual highlighting of the channel elements now.
-// Basically we need to do three steps in order to highlight the new channel element.
-// First of all we need to remove the “selected” class from the previously highlighted channel.
-//Then we need to add the “selected” class to the new selected channel. And last but not least we have to assign the new channel to the “selectedChannel” variable.
-
-// Tip: Remember you want to add the “selected” class to the channel object that is passed to the function in order.
-
-// After that simply assign the channel object passed to the function to the selectedChannel variable.
-// Now your channels should be highlighted when clicking on them. That’s already pretty cool right.
-
-// The last thing we need to to with the channels is to implement that the correct channel attributes are displayed in the headbar of the message area.
-
 // Therefore we need to add an id “channelName” to the <h1> tag in the “message-area”.
 
 // Now we can start writing a function we call “showHeader()”. We do not need to pass any arguments to it.
