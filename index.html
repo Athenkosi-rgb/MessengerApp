@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
-  <body>
+  <body onload="init();">
     <!-- ===========================================|CHANNEL SECTION|===============================================-->
     <!--Left Chat, Shows recents, and summary of chat-->
     <section id="channels-view">
@@ -38,9 +38,9 @@
       </div>
 
       <div id="channel-area">
-        <ul class="channel-list">
-          <li class="heading">Favorites</li>
-          <li id="channel1" onclick="switchChannel(channel1);">
+        <h2 class="heading">Favorites</h2>
+        <ul class="channel-list" id="favorite-channels">
+          <!-- <li id="channel1" onclick="switchChannel(channel1);">
             <i class="material-icons group-icon">group</i>
             <span class="channel-name">MeetUp</span>
             <span class="timestamp">11:51</span>
@@ -49,10 +49,11 @@
             <i class="material-icons group-icon">group</i>
             <span class="channel-name">OktoberFest</span>
             <span class="timestamp">10:51</span>
-          </li>
-
-          <li class="heading">Regular</li>
-          <li id="channel3" onclick="switchChannel(channel3);">
+          </li> -->
+        </ul>
+        <h2 class="heading">Regular</h2>
+        <ul class="channel-list" id="regular-channels">
+          <!-- <li id="channel3" onclick="switchChannel(channel3);">
             <i class="material-icons group-icon">group</i>
             <span class="channel-name">WeatherChannel</span>
             <span class="timestamp">Yesterday</span>
@@ -61,7 +62,7 @@
             <i class="material-icons group-icon">group</i>
             <span class="channel-name">SevenContinents</span>
             <span class="timestamp">23 May 2019</span>
-          </li>
+          </li> -->
         </ul>
       </div>
     </section>

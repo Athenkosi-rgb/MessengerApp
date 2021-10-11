@@ -2,7 +2,7 @@ const message1 = {
   createdBy: "Jack Blue",
   createdOn: new Date("December 08, 2018 17:24:00"),
   channel: "OktoberFest",
-  own: false,
+  own: true,
   text: "Yo, What's up?",
 };
 const message2 = {
