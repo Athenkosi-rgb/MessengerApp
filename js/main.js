@@ -74,7 +74,7 @@ function showMessages() {
   channels.forEach((channel) => {
     if (selectedChannel.id === channel.id) {
       channel.messages.forEach((message) => {
-        if (channel.messages.own === false) {
+        if (message.own == false) {
           // the html content for incoming messages
           chatHtmlString +=
             `<div class = "incoming">
@@ -112,8 +112,6 @@ function showMessages() {
       });
     }
   });
-
-  chatMessages.innerHTML = chatHtmlString;
 
   // This is the proper code but the timestamp messses up the formating, Hence I am using the temporary solution above for now
 
@@ -171,7 +169,7 @@ function sendMessage() {
     selectedChannel.messages.push(message);
     document.getElementById("message-input").value = "";
     showMessages();
-    displayChannels();
+    // displayChannels();
   } else {
     return;
   }
