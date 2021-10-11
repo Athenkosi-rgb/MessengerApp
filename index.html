@@ -39,31 +39,9 @@
 
       <div id="channel-area">
         <h2 class="heading">Favorites</h2>
-        <ul class="channel-list" id="favorite-channels">
-          <!-- <li id="channel1" onclick="switchChannel(channel1);">
-            <i class="material-icons group-icon">group</i>
-            <span class="channel-name">MeetUp</span>
-            <span class="timestamp">11:51</span>
-          </li>
-          <li id="channel2" onclick="switchChannel(channel2);">
-            <i class="material-icons group-icon">group</i>
-            <span class="channel-name">OktoberFest</span>
-            <span class="timestamp">10:51</span>
-          </li> -->
-        </ul>
+        <ul class="channel-list" id="favorite-channels"></ul>
         <h2 class="heading">Regular</h2>
-        <ul class="channel-list" id="regular-channels">
-          <!-- <li id="channel3" onclick="switchChannel(channel3);">
-            <i class="material-icons group-icon">group</i>
-            <span class="channel-name">WeatherChannel</span>
-            <span class="timestamp">Yesterday</span>
-          </li>
-          <li id="channel4" onclick="switchChannel(channel4);">
-            <i class="material-icons group-icon">group</i>
-            <span class="channel-name">SevenContinents</span>
-            <span class="timestamp">23 May 2019</span>
-          </li> -->
-        </ul>
+        <ul class="channel-list" id="regular-channels"></ul>
       </div>
     </section>
     <!-- =====================================================================================================-->
@@ -71,24 +49,23 @@
     <!-- ======================================|CHAT SECTION|=================================================-->
 
     <!--Right Channel, Shows actual chat of particular group-->
-    <section id="chat-view">
+    <section id="chat-container">
       <div class="headbar-chat">
         <h1 id="channelName">MeetUp</h1>
         <a class="material-icons" id="favorite-button">favorite</a>
       </div>
 
       <div id="chat-area">
+        <!-- <p id="select-channel">Select a channel to start messaging.</p> -->
         <div class="incoming">
           <div class="message-wrapper">
             <i class="material-icons chat-icon">account_circle</i>
             <div class="messages">
               <div class="username">Jessie Koch</div>
               <div class="text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.
               </div>
             </div>
           </div>
@@ -99,11 +76,9 @@
           <div class="message-wrapper">
             <div class="messages">
               <div class="text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.
               </div>
             </div>
             <i class="material-icons chat-icon">account_circle</i>
@@ -113,11 +88,9 @@
           <div class="message-wrapper">
             <div class="messages">
               <div class="text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.
               </div>
             </div>
             <i class="material-icons chat-icon">account_circle</i>
@@ -141,11 +114,9 @@
             <div class="messages">
               <div class="username">Jessie Koch</div>
               <div class="text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
-                </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
               </div>
             </div>
           </div>
@@ -156,12 +127,10 @@
             <div class="messages">
               <div class="username">Jessie Koch</div>
               <div class="text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </div>
             </div>
           </div>
@@ -171,7 +140,7 @@
             <i class="material-icons chat-icon">account_circle</i>
             <div class="messages">
               <div class="username">Jessie Koch</div>
-              <div class="text"><p>Lorem ipsum.</p></div>
+              <div class="text">Lorem ipsum.</div>
             </div>
           </div>
           <div class="timestamp">11:45</div>
@@ -180,7 +149,7 @@
         <div class="outgoing">
           <div class="message-wrapper">
             <div class="messages">
-              <div class="text"><p>Lorem ipsum.</p></div>
+              <div class="text">Lorem ipsum.</div>
             </div>
             <i class="material-icons chat-icon">account_circle</i>
           </div>
@@ -205,9 +174,16 @@
           >send</a
         >
       </div>
+      <!-- <div id="emoji-area">
+        <div id="emoji-header">
+          <span>Emojis</span>
+          <a class="material-icons button" id="close-emoticon-button">cancel</a>
+        </div>
+        <div id="emoji-list"></div>
+      </div> -->
       <div class="divider"></div>
     </section>
-    <!-- ========================|CHAT SECTION|=================================================-->
+    <!-- =======================================|SOURCING JAVASCRIPT DOCUMENTS|=================================================-->
 
     <script
       type="text/javascript"
@@ -218,5 +194,7 @@
       src="../MessengerApp/js/messages.js"
     ></script>
     <script type="text/javascript" src="../MessengerApp/js/main.js"></script>
+
+    <!-- =======================================|SOURCING JAVASCRIPT DOCUMENTS|=================================================-->
   </body>
 </html>
