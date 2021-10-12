@@ -86,26 +86,26 @@ Channel.prototype.latestMessage = function () {
   }
 };
 
-// // Event listener: New channel modal is shown if users clicks on floating action button
-// document.getElementById("add-button").addEventListener("click", () => {
-//   document.getElementById("modal").style.display = "flex";
-// });
+// Event listener: New channel modal is shown if users clicks on floating action button
+document.getElementById("add-button").addEventListener("click", () => {
+  document.getElementById("modal").style.display = "flex";
+});
 
-// // Event listener: New channel modal is hidden if users clicks on cancel button
-// document.getElementById("cancel-button").addEventListener("click", () => {
-//   document.getElementById("modal").style.display = "none";
-//   document.getElementById("channel-name").value = "";
-// });
+// Event listener: New channel modal is hidden if users clicks on cancel button
+document.getElementById("cancel-button").addEventListener("click", () => {
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("channel-name").value = "";
+});
 
-// // Event listener: New channel will be created if users clicks on check button or presses enter
-// document
-//   .getElementById("check-button")
-//   .addEventListener("click", createChannel);
-// document.getElementById("channel-name").onkeydown = function (e) {
-//   if (e.keyCode == 13) {
-//     createChannel();
-//   }
-// };
+// Event listener: New channel will be created if users clicks on check button or presses enter
+document
+  .getElementById("check-button")
+  .addEventListener("click", createChannel);
+document.getElementById("channel-name").onkeydown = function (e) {
+  if (e.keyCode == 13) {
+    createChannel();
+  }
+};
 
 // New channel is created with value from input. Return if input is empty
 function createChannel() {
@@ -155,6 +155,7 @@ function sortChannels() {
 // Load our existing channels into the channel area.
 
 function displayChannels() {
+  console.log("DISPLAY CHANNELS: FUNCTION CALLED!!!!!");
   const favoriteList = document.getElementById("favorite-channels");
   const regularList = document.getElementById("regular-channels");
   favoriteList.innerHTML = ""; // making sure that there is no content inside these two lists
@@ -162,6 +163,7 @@ function displayChannels() {
 
   //The code below takes the empty favorite and regular list, and loads the channels into these two lists
   channels.forEach((channel) => {
+    console.log("TIMESTAMP LOOP ENTERED!!!");
     const currentChannelHtmlString =
       `  <li id="` +
       channel.id +
@@ -171,7 +173,7 @@ function displayChannels() {
       channel.name +
       `</span>
                                             <span class="timestamp">` +
-      channel.latestMessage +
+      channel.latestMessage() +
       `</span>
                                             </li>`;
     if (channel.favorite) {
@@ -310,7 +312,7 @@ function showMessages() {
   //update timestamp in channel area
   document
     .getElementById(selectedChannel.id)
-    .querySelector(".timestamp").innerHTML = selectedChannel.latestMessage;
+    .querySelector(".timestamp").innerHTML = selectedChannel.latestMessage();
 }
 
 //============================================================================================SEND MESSAGE==============================================================================================

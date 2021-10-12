@@ -380,3 +380,63 @@ input {
 #emoji-header a {
   line-height: 48px;
 }
+
+/*====================================================================================*/
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal input {
+  height: 44px;
+  width: 92%;
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+  border-bottom-right-radius: 1vh;
+  border-bottom-left-radius: 1vh;
+  border: 0;
+  padding-left: 15px;
+  margin: 5px 0;
+  text-align: start;
+}
+
+/* Style Basti: style cancel und create button für add channel area */
+#modal-buttons {
+  height: 36px;
+}
+
+.button-vertical-center {
+  display: inline-block;
+  background-color: #00838f;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  min-width: 64px;
+  line-height: 36px;
+  padding-left: 12px;
+  padding-right: 16px;
+  margin: 5px 0;
+}
+
+.button-icons,
+.button-text {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#channel-input p {
+  font-weight: bold;
+  font-size: larger;
+  color: #00838f;
+  margin: 0 auto;
+}
