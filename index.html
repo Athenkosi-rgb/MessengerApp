@@ -26,7 +26,7 @@
     <!-- ===========================================|CHANNEL SECTION|===============================================-->
     <!--Left Chat, Shows recents, and summary of chat-->
     <section id="channels-view">
-      <div class="headbar-channel">
+      <div id="headbar-channel">
         <img
           id="logo"
           src="https://ip.lfe.mw.tum.de/sections/moocus.png"
@@ -50,111 +50,13 @@
 
     <!--Right Channel, Shows actual chat of particular group-->
     <section id="chat-container">
-      <div class="headbar-chat">
+      <div id="headbar-chat">
         <h1 id="channelName">MeetUp</h1>
         <a class="material-icons" id="favorite-button">favorite</a>
       </div>
 
       <div id="chat-area">
         <p id="select-channel">Select a channel to start messaging.</p>
-        <!-- <div class="incoming">
-          <div class="message-wrapper">
-            <i class="material-icons chat-icon">account_circle</i>
-            <div class="messages">
-              <div class="username">Jessie Koch</div>
-              <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation.
-              </div>
-            </div>
-          </div>
-          <div class="timestamp">11:45</div>
-        </div>
-
-        <div class="outgoing">
-          <div class="message-wrapper">
-            <div class="messages">
-              <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation.
-              </div>
-            </div>
-            <i class="material-icons chat-icon">account_circle</i>
-          </div>
-          <div class="timestamp">11:52</div>
-
-          <div class="message-wrapper">
-            <div class="messages">
-              <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation.
-              </div>
-            </div>
-            <i class="material-icons chat-icon">account_circle</i>
-          </div>
-          <div class="timestamp">11:52</div>
-        </div>
-
-        <div class="outgoing">
-          <div class="message-wrapper">
-            <div class="messages">
-              <div class="text">Lorem ipsum.</div>
-            </div>
-            <i class="material-icons chat-icon">account_circle</i>
-          </div>
-          <div class="timestamp">11:52</div>
-        </div>
-
-        <div class="incoming">
-          <div class="message-wrapper">
-            <i class="material-icons chat-icon">account_circle</i>
-            <div class="messages">
-              <div class="username">Jessie Koch</div>
-              <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
-              </div>
-            </div>
-          </div>
-          <div class="timestamp">11:45</div>
-
-          <div class="message-wrapper">
-            <i class="material-icons chat-icon">account_circle</i>
-            <div class="messages">
-              <div class="username">Jessie Koch</div>
-              <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </div>
-            </div>
-          </div>
-          <div class="timestamp">11:45</div>
-
-          <div class="message-wrapper">
-            <i class="material-icons chat-icon">account_circle</i>
-            <div class="messages">
-              <div class="username">Jessie Koch</div>
-              <div class="text">Lorem ipsum.</div>
-            </div>
-          </div>
-          <div class="timestamp">11:45</div>
-        </div>
-
-        <div class="outgoing">
-          <div class="message-wrapper">
-            <div class="messages">
-              <div class="text">Lorem ipsum.</div>
-            </div>
-            <i class="material-icons chat-icon">account_circle</i>
-          </div>
-          <div class="timestamp">11:52</div>
-        </div> -->
       </div>
 
       <div id="input-area">
@@ -174,13 +76,13 @@
           >send</a
         >
       </div>
-      <!-- <div id="emoji-area">
+      <div id="emoji-area">
         <div id="emoji-header">
           <span>Emojis</span>
           <a class="material-icons button" id="close-emoticon-button">cancel</a>
         </div>
         <div id="emoji-list"></div>
-      </div> -->
+      </div>
       <div class="divider"></div>
     </section>
     <!-- =======================================|SOURCING JAVASCRIPT DOCUMENTS|=================================================-->
@@ -194,6 +96,7 @@
       src="../MessengerApp/js/messages.js"
     ></script>
     <script type="text/javascript" src="../MessengerApp/js/main.js"></script>
+    <script src="../MessengerApp/js/emojis.js"></script>
 
     <!-- =======================================|SOURCING JAVASCRIPT DOCUMENTS|=================================================-->
   </body>

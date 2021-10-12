@@ -31,7 +31,7 @@ li {
 
 /* App Bar*/
 
-.headbar-channel {
+#headbar-channel {
   background-color: #eeeeee;
   height: 60px;
   padding-top: 0px;
@@ -65,7 +65,7 @@ h1 {
   font-weight: bold;
 }
 
-.headbar-chat {
+#headbar-chat {
   position: fixed;
   background-color: #eeeeee;
   height: 40px;
@@ -164,6 +164,10 @@ h1 {
   cursor: pointer;
 }
 
+.channel-list li:hover {
+  background-color: #f5f5f5;
+}
+
 .channel-name {
   font-weight: bold;
   font-size: 16px;
@@ -197,7 +201,6 @@ h1 {
   height: 100vh;
   left: 400px;
   width: calc(100% - 400px);
-  border: 3px solid #111111;
 }
 
 .username {
@@ -330,3 +333,50 @@ input {
 }
 
 /*====================================================================================*/
+
+#emoji-area {
+  display: none;
+  height: 250px;
+  width: inherit;
+  position: fixed;
+  left: 400px;
+  bottom: 66px;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
+.toggle-area {
+  display: block !important;
+}
+
+#emoji-list {
+  box-sizing: border-box;
+  font-size: 22px;
+  height: 200px;
+  width: 100%;
+  padding: 0 22px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#emoji-list span {
+  margin-right: 5px;
+}
+
+#emoji-header {
+  display: flex;
+  color: #00838f;
+  height: 48px;
+  line-height: 48px;
+  justify-content: space-between;
+  padding: 0px 22px 0px 22px;
+  margin: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#emoji-header a {
+  line-height: 48px;
+}
