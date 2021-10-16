@@ -86,40 +86,45 @@ Channel.prototype.latestMessage = function () {
   }
 };
 
-// Event listener: New channel modal is shown if users clicks on floating action button
-document.getElementById("add-button").addEventListener("click", () => {
-  document.getElementById("modal").style.display = "flex";
-});
+function cancelChannel() {
+  document.getElementById("newChannel-background").style.display = "none";
+  document.getElementById("newChannel-name").value = "";
+}
 
-// Event listener: New channel modal is hidden if users clicks on cancel button
-document.getElementById("cancel-button").addEventListener("click", () => {
-  document.getElementById("modal").style.display = "none";
-  document.getElementById("channel-name").value = "";
-});
+// Event listener: Call confirmChannel() if user clicks on add-button
+document.getElementById("add-button").addEventListener("click", confirmChannel);
 
-// Event listener: New channel will be created if users clicks on check button or presses enter
-document
-  .getElementById("check-button")
-  .addEventListener("click", createChannel);
-document.getElementById("channel-name").onkeydown = function (e) {
-  if (e.keyCode == 13) {
-    createChannel();
-  }
-};
+// creates Channel when Enter is pressed
+function confirmChannel() {
+  document.getElementById("newChannel-name").onkeydown = function (e) {
+    if (e.keyCode == 13) {
+      createChannel();
+      document.getElementById("newChannel-background").style.display = "none";
+    }
+  };
+}
+
+// creates channel when create-button is pressed
+function confirmChannel2() {
+  createChannel();
+  document.getElementById("newChannel-background").style.display = "none";
+}
 
 // New channel is created with value from input. Return if input is empty
 function createChannel() {
-  const channelName = document.getElementById("channel-name").value;
-  if (!!channelName) {
-    const channel = new Channel(channelName);
-    console.log("New Channel: ", channel);
-    channels.unshift(channel);
-    document.getElementById("channel-name").value = "";
-    document.getElementById("modal").style.display = "none";
-    selectedChannel = channel;
+  console.log("createChannel called");
+  const newChannel = document.getElementById("newChannel-name").value;
+  if (!!newChannel) {
+    const chanler = new Channel(newChannel);
+    console.log("New Channel: ", chanler);
+    channels.push(chanler);
+    //     channels.unshift(channel);
+    document.getElementById("newChannel-name").value = "";
+    selectedChannel = chanler;
     displayChannels();
-    switchChannel(channel.id);
+    switchChannel(chanler.id);
   } else {
+    console.log("returning from createChannel");
     return;
   }
 }
@@ -128,6 +133,14 @@ function createChannel() {
 document
   .getElementById("favorite-button")
   .addEventListener("click", favoriteChannel);
+
+// Event listener: Call add-button if user clicks on favorite button
+document
+  .getElementById("add-button")
+  .addEventListener("click", displayNewChannelWindow);
+function displayNewChannelWindow() {
+  document.getElementById("newChannel-background").style.display = "initial";
+}
 
 // Toggles favorite property of channel and displays channel accordingly in sidebar
 function favoriteChannel() {
@@ -141,8 +154,6 @@ function favoriteChannel() {
   switchChannel(selectedChannel.id);
 }
 
-// TODO: sort channel function: by timestamp of latest message
-
 // simple sort function: insert current channel at [0] in channels array and call it if new message is sent
 function sortChannels() {
   //remove first
@@ -155,7 +166,6 @@ function sortChannels() {
 // Load our existing channels into the channel area.
 
 function displayChannels() {
-  console.log("DISPLAY CHANNELS: FUNCTION CALLED!!!!!");
   const favoriteList = document.getElementById("favorite-channels");
   const regularList = document.getElementById("regular-channels");
   favoriteList.innerHTML = ""; // making sure that there is no content inside these two lists
@@ -163,7 +173,6 @@ function displayChannels() {
 
   //The code below takes the empty favorite and regular list, and loads the channels into these two lists
   channels.forEach((channel) => {
-    console.log("TIMESTAMP LOOP ENTERED!!!");
     const currentChannelHtmlString =
       `  <li id="` +
       channel.id +
@@ -331,25 +340,12 @@ function sendMessage() {
     document.getElementById("message-input").value = "";
     document.getElementById("send-button").style.color = "#00838f54";
     showMessages();
-    // sortChannels();
+    sortChannels();
     displayChannels();
-    // receiveEchoMessage();
   } else {
     return;
   }
 }
-
-// // get an echo message
-// function receiveEchoMessage() {
-//   const userName = "Lorenz";
-//   const own = false;
-//   const text = "You wrote: " + selectedChannel.messages.text;
-//   const channelID = selectedChannel.id;
-//   const message = new Message(userName, own, text, channelID);
-//   selectedChannel.messages.push(message);
-//   // set timeout for a more natural response time
-//   setTimeout(showMessages, 5500);
-// }
 
 //================================================================================================END===============================================================================================
 // Load messages into the chat section - for each channel

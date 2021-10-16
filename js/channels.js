@@ -10,13 +10,13 @@ const channel1 = {
       );
       // if message is from yesterday or older, display date, else display time
       if (new Date().getDate() - latest.getDate() > 1) {
-        return latest.toLocaleDateString(browserLanguage, {
+        return latest.toLocaleDateString(navigator.language, {
           year: "numeric",
           month: "numeric",
           day: "numeric",
         });
       } else {
-        return latest.toLocaleTimeString(browserLanguage, {
+        return latest.toLocaleTimeString(navigator.language, {
           hour: "numeric",
           minute: "numeric",
         });
@@ -38,13 +38,13 @@ const channel2 = {
       );
       // if message is from yesterday or older, display date, else display time
       if (new Date().getDate() - latest.getDate() > 1) {
-        return latest.toLocaleDateString(browserLanguage, {
+        return latest.toLocaleDateString(navigator.language, {
           year: "numeric",
           month: "numeric",
           day: "numeric",
         });
       } else {
-        return latest.toLocaleTimeString(browserLanguage, {
+        return latest.toLocaleTimeString(navigator.language, {
           hour: "numeric",
           minute: "numeric",
         });
@@ -66,13 +66,13 @@ const channel3 = {
       );
       // if message is from yesterday or older, display date, else display time
       if (new Date().getDate() - latest.getDate() > 1) {
-        return latest.toLocaleDateString(browserLanguage, {
+        return latest.toLocaleDateString(navigator.language, {
           year: "numeric",
           month: "numeric",
           day: "numeric",
         });
       } else {
-        return latest.toLocaleTimeString(browserLanguage, {
+        return latest.toLocaleTimeString(navigator.language, {
           hour: "numeric",
           minute: "numeric",
         });
@@ -94,13 +94,13 @@ const channel4 = {
       );
       // if message is from yesterday or older, display date, else display time
       if (new Date().getDate() - latest.getDate() > 1) {
-        return latest.toLocaleDateString(browserLanguage, {
+        return latest.toLocaleDateString(navigator.language, {
           year: "numeric",
           month: "numeric",
           day: "numeric",
         });
       } else {
-        return latest.toLocaleTimeString(browserLanguage, {
+        return latest.toLocaleTimeString(navigator.language, {
           hour: "numeric",
           minute: "numeric",
         });

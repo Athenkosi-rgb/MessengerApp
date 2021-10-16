@@ -85,25 +85,39 @@
       </div>
       <div class="divider"></div>
     </section>
-    <section id="modal">
-      <div id="channel-input">
-        <p>Channel Name</p>
-        <input
-          type="text"
-          id="channel-name"
-          name="channel-name"
-          minlength="1"
-          maxlength="500"
-        />
-        <div id="modal-buttons">
-          <span class="button button-vertical-center" id="cancel-button">
-            <a class="material-icons button-icons">cancel</a>
-            <span class="button-text">cancel</span>
-          </span>
-          <span class="button button-vertical-center" id="check-button">
-            <a class="material-icons button-icons">check</a>
-            <span class="button-text">create</span>
-          </span>
+
+    <section id="newChannel-background">
+      <div id="newChannel-window">
+        <div id="title">Channel Name</div>
+        <div id="channel-input">
+          <input
+            type="text"
+            id="newChannel-name"
+            name="newChannel-name"
+            minlength="1"
+            maxlength="500"
+            placeholder="... write channel name"
+          />
+          <div id="newChannel-buttons">
+            <span class="buttons">
+              <a class="material-icons button-icons" onclick="cancelChannel();"
+                >cancel</a
+              >
+              <span class="button-text" onclick="cancelChannel();"
+                >cancel</span
+              ></span
+            >
+            <span class="buttons">
+              <a
+                class="material-icons button-icons"
+                onclick="confirmChannel2();"
+                >check</a
+              >
+              <span class="button-text" onclick="confirmChannel2();"
+                >create</span
+              >
+            </span>
+          </div>
         </div>
       </div>
     </section>
